@@ -1,0 +1,55 @@
+Added Component: Designator=C1(AP1-00041)
+Added Component: Designator=C2(AP1-00001)
+Added Component: Designator=C3(AP1-00001)
+Added Component: Designator=C4(AP1-00041)
+Added Component: Designator=C5(AP1-00041)
+Added Component: Designator=C6(AP1-00041)
+Added Component: Designator=C7(AP1-00001)
+Added Component: Designator=C8(AP1-00001)
+Added Component: Designator=C9(AP1-00001)
+Added Component: Designator=J2(AP8-00852)
+Added Component: Designator=R6(AP2-00011)
+Added Pin To Net: NetName=VCORE Pin=C1-1
+Added Pin To Net: NetName=GND Pin=C1-2
+Added Pin To Net: NetName=GND Pin=C2-1
+Added Pin To Net: NetName=NetC2_2 Pin=C2-2
+Added Pin To Net: NetName=VCORE Pin=C3-1
+Added Pin To Net: NetName=GND Pin=C3-2
+Added Pin To Net: NetName=VCC Pin=C4-1
+Added Pin To Net: NetName=GND Pin=C4-2
+Added Pin To Net: NetName=VCC Pin=C5-1
+Added Pin To Net: NetName=GND Pin=C5-2
+Added Pin To Net: NetName=VCC Pin=C6-1
+Added Pin To Net: NetName=GND Pin=C6-2
+Added Pin To Net: NetName=VCC Pin=C7-1
+Added Pin To Net: NetName=GND Pin=C7-2
+Added Pin To Net: NetName=VCC Pin=C8-1
+Added Pin To Net: NetName=GND Pin=C8-2
+Added Pin To Net: NetName=VCC Pin=C9-1
+Added Pin To Net: NetName=GND Pin=C9-2
+Added Pin To Net: NetName=VBUS Pin=J2-1
+Added Pin To Net: NetName=USB_N Pin=J2-2
+Added Pin To Net: NetName=USB_P Pin=J2-3
+Added Pin To Net: NetName=GND Pin=J2-5
+Added Pin To Net: NetName=NetC2_2 Pin=J2-6
+Added Pin To Net: NetName=NetC2_2 Pin=J2-6
+Added Pin To Net: NetName=NetC2_2 Pin=J2-7
+Added Pin To Net: NetName=NetC2_2 Pin=J2-7
+Added Pin To Net: NetName=NetC2_2 Pin=J2-8
+Added Pin To Net: NetName=NetC2_2 Pin=J2-8
+Added Pin To Net: NetName=NetC2_2 Pin=J2-9
+Added Pin To Net: NetName=NetC2_2 Pin=J2-9
+Added Pin To Net: NetName=GND Pin=R6-1
+Added Pin To Net: NetName=NetC2_2 Pin=R6-2
+Added Pin To Net: NetName=VCCBAT Pin=U2-2
+Added Member To Class: ClassName=Sheet1_Cpu Member=Component C1 
+Added Member To Class: ClassName=Sheet1_Cpu Member=Component C2 CAP-NONPOL
+Added Member To Class: ClassName=Sheet1_Cpu Member=Component C3 CAP-NONPOL
+Added Member To Class: ClassName=Sheet1_Cpu Member=Component C4 
+Added Member To Class: ClassName=Sheet1_Cpu Member=Component C5 
+Added Member To Class: ClassName=Sheet1_Cpu Member=Component C6 
+Added Member To Class: ClassName=Sheet1_Cpu Member=Component C7 CAP-NONPOL
+Added Member To Class: ClassName=Sheet1_Cpu Member=Component C8 CAP-NONPOL
+Added Member To Class: ClassName=Sheet1_Cpu Member=Component C9 CAP-NONPOL
+Added Member To Class: ClassName=Sheet1_Cpu Member=Component J2 ZX62D-AB-5P8
+Added Member To Class: ClassName=Sheet1_Cpu Member=Component R6 R2

@@ -1,0 +1,7 @@
+Removed Pin From Net: NetName=VCCBAT Pin=U3-2
+Change Component Footprint: Designator=U3 Old Footprint=SOT23-5 New Footprint=SOT95P270X145-5N
+Added Component: Designator=U?(SOT95P270X145-5N)
+Added Pin To Net: NetName=GND Pin=U3-2
+Added Pin To Net: NetName=VCCBAT Pin=U3-3
+Added Pin To Net: NetName=UVLO Pin=U?-4
+Added Member To Class: ClassName=Sheet3_Bat Member=Component U? MCP73831T-2DCI/OT

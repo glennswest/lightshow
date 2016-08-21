@@ -1,0 +1,47 @@
+Removed Pin From Net: NetName=PTCY2 Pin=S3-1
+Removed Pin From Net: NetName=PTCX0 Pin=S3-2
+Removed Pin From Net: NetName=PTCY2 Pin=S6-1
+Removed Pin From Net: NetName=PTCX1 Pin=S6-2
+Removed Pin From Net: NetName=PTCY2 Pin=S9-1
+Removed Pin From Net: NetName=PTCX2 Pin=S9-2
+Removed Pin From Net: NetName=PTCY2 Pin=S12-1
+Removed Pin From Net: NetName=PTCX3 Pin=S12-2
+Removed Pin From Net: NetName=PTCY2 Pin=S15-1
+Removed Pin From Net: NetName=PTCX4 Pin=S15-2
+Removed Member From Class: ClassName=Sheet4_Switch Member=S11
+Removed Member From Class: ClassName=Sheet4_Switch Member=S12
+Removed Member From Class: ClassName=Sheet4_Switch Member=S13
+Removed Member From Class: ClassName=Sheet4_Switch Member=S14
+Removed Member From Class: ClassName=Sheet4_Switch Member=S15
+Change Component Designator: OldDesignator=C2 NewDesignator=C9
+Change Component Designator: OldDesignator=C3 NewDesignator=C2
+Change Component Designator: OldDesignator=C4 NewDesignator=C3
+Change Component Designator: OldDesignator=C6 NewDesignator=C7
+Change Component Designator: OldDesignator=C7 NewDesignator=C4
+Change Component Designator: OldDesignator=C8 NewDesignator=C6
+Change Component Designator: OldDesignator=C9 NewDesignator=C8
+Change Component Designator: OldDesignator=C10 NewDesignator=C12
+Change Component Designator: OldDesignator=C11 NewDesignator=C15
+Change Component Designator: OldDesignator=C12 NewDesignator=C10
+Change Component Designator: OldDesignator=C13 NewDesignator=C11
+Change Component Designator: OldDesignator=C15 NewDesignator=C13
+Change Component Designator: OldDesignator=J2 NewDesignator=J3
+Change Component Designator: OldDesignator=J3 NewDesignator=J2
+Change Component Designator: OldDesignator=R7 NewDesignator=R11
+Change Component Designator: OldDesignator=R8 NewDesignator=R7
+Change Component Designator: OldDesignator=R10 NewDesignator=R8
+Change Component Designator: OldDesignator=R11 NewDesignator=R10
+Change Component Designator: OldDesignator=S2 NewDesignator=S6
+Change Component Designator: OldDesignator=S4 NewDesignator=S2
+Change Component Designator: OldDesignator=S5 NewDesignator=S7
+Change Component Designator: OldDesignator=S7 NewDesignator=S3
+Change Component Designator: OldDesignator=S10 NewDesignator=S4
+Change Component Designator: OldDesignator=S11 NewDesignator=S9
+Change Component Designator: OldDesignator=S13 NewDesignator=S5
+Change Component Designator: OldDesignator=S14 NewDesignator=S10
+Change Component Designator: OldDesignator=U2 NewDesignator=U3
+Change Component Designator: OldDesignator=U3 NewDesignator=U2
+Added Pin To Net: NetName=VCCBAT Pin=U3-2
+Change Net Name : Old Net Name=NetC2_2 New Net Name=NetC9_2
+Change Net Name : Old Net Name=NetC15_1 New Net Name=NetC13_1
+Change Net Name : Old Net Name=NetR7_2 New Net Name=NetR11_2

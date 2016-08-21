@@ -1,0 +1,14 @@
+Change Component Footprint: Designator=CS1 Old Footprint= New Footprint=qtouchsw
+Change Component Footprint: Designator=CS2 Old Footprint= New Footprint=qtouchsw
+Change Component Footprint: Designator=CS3 Old Footprint= New Footprint=qtouchsw
+Change Component Footprint: Designator=CS4 Old Footprint= New Footprint=qtouchsw
+Change Component Footprint: Designator=CS5 Old Footprint= New Footprint=qtouchsw
+Change Component Footprint: Designator=CS6 Old Footprint= New Footprint=qtouchsw
+Change Component Footprint: Designator=CS7 Old Footprint= New Footprint=qtouchsw
+Change Component Footprint: Designator=CS8 Old Footprint= New Footprint=qtouchsw
+Change Component Footprint: Designator=CS9 Old Footprint= New Footprint=qtouchsw
+Change Component Footprint: Designator=CS10 Old Footprint= New Footprint=qtouchsw
+Added Room: Name=Sheet1_Cpu
+Added Room: Name=Sheet2_led
+Added Room: Name=Sheet3_Bat
+Added Room: Name=Sheet4_Switch

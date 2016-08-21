@@ -1,0 +1,68 @@
+Removed Pin From Net: NetName=PTCY0 Pin=S1-1
+Removed Pin From Net: NetName=PTCX0 Pin=S1-2
+Removed Pin From Net: NetName=PTCY0 Pin=S2-1
+Removed Pin From Net: NetName=PTCX1 Pin=S2-2
+Removed Pin From Net: NetName=PTCY0 Pin=S3-1
+Removed Pin From Net: NetName=PTCX2 Pin=S3-2
+Removed Pin From Net: NetName=PTCY0 Pin=S4-1
+Removed Pin From Net: NetName=PTCX3 Pin=S4-2
+Removed Pin From Net: NetName=PTCY0 Pin=S5-1
+Removed Pin From Net: NetName=PTCX4 Pin=S5-2
+Removed Pin From Net: NetName=PTCY1 Pin=S6-1
+Removed Pin From Net: NetName=PTCX0 Pin=S6-2
+Removed Pin From Net: NetName=PTCY1 Pin=S7-1
+Removed Pin From Net: NetName=PTCX1 Pin=S7-2
+Removed Pin From Net: NetName=PTCY1 Pin=S8-1
+Removed Pin From Net: NetName=PTCX2 Pin=S8-2
+Removed Pin From Net: NetName=PTCY1 Pin=S9-1
+Removed Pin From Net: NetName=PTCX3 Pin=S9-2
+Removed Pin From Net: NetName=PTCY1 Pin=S10-1
+Removed Pin From Net: NetName=PTCX4 Pin=S10-2
+Removed Member From Class: ClassName=Sheet4_Switch Member=S1
+Removed Member From Class: ClassName=Sheet4_Switch Member=S2
+Removed Member From Class: ClassName=Sheet4_Switch Member=S3
+Removed Member From Class: ClassName=Sheet4_Switch Member=S4
+Removed Member From Class: ClassName=Sheet4_Switch Member=S6
+Removed Member From Class: ClassName=Sheet4_Switch Member=S7
+Removed Member From Class: ClassName=Sheet4_Switch Member=S8
+Removed Member From Class: ClassName=Sheet4_Switch Member=S9
+Added Component: Designator=CS1()
+Added Component: Designator=CS2()
+Added Component: Designator=CS3()
+Added Component: Designator=CS4()
+Added Component: Designator=CS5()
+Added Component: Designator=CS6()
+Added Component: Designator=CS7()
+Added Component: Designator=CS8()
+Added Component: Designator=CS9()
+Added Component: Designator=CS10()
+Added Pin To Net: NetName=PTCX0 Pin=CS1-X
+Added Pin To Net: NetName=PTCY0 Pin=CS1-Y
+Added Pin To Net: NetName=PTCX1 Pin=CS2-X
+Added Pin To Net: NetName=PTCY0 Pin=CS2-Y
+Added Pin To Net: NetName=PTCX2 Pin=CS3-X
+Added Pin To Net: NetName=PTCY0 Pin=CS3-Y
+Added Pin To Net: NetName=PTCX3 Pin=CS4-X
+Added Pin To Net: NetName=PTCY0 Pin=CS4-Y
+Added Pin To Net: NetName=PTCX4 Pin=CS5-X
+Added Pin To Net: NetName=PTCY0 Pin=CS5-Y
+Added Pin To Net: NetName=PTCX0 Pin=CS6-X
+Added Pin To Net: NetName=PTCX1 Pin=CS7-X
+Added Pin To Net: NetName=PTCY1 Pin=CS7-Y
+Added Pin To Net: NetName=PTCX2 Pin=CS8-X
+Added Pin To Net: NetName=PTCY1 Pin=CS8-Y
+Added Pin To Net: NetName=PTCX3 Pin=CS9-X
+Added Pin To Net: NetName=PTCX4 Pin=CS10-X
+Added Pin To Net: NetName=PTCY1 Pin=CS10-Y
+Added Member To Class: ClassName=Sheet3_Bat Member=Component C12 4µ7
+Added Member To Class: ClassName=Sheet4_Switch Member=Component CS1 QMatrix Button
+Added Member To Class: ClassName=Sheet4_Switch Member=Component CS2 QMatrix Button
+Added Member To Class: ClassName=Sheet4_Switch Member=Component CS3 QMatrix Button
+Added Member To Class: ClassName=Sheet4_Switch Member=Component CS4 QMatrix Button
+Added Member To Class: ClassName=Sheet4_Switch Member=Component CS5 QMatrix Button
+Added Member To Class: ClassName=Sheet4_Switch Member=Component CS6 QMatrix Button
+Added Member To Class: ClassName=Sheet4_Switch Member=Component CS7 QMatrix Button
+Added Member To Class: ClassName=Sheet4_Switch Member=Component CS8 QMatrix Button
+Added Member To Class: ClassName=Sheet4_Switch Member=Component CS9 QMatrix Button
+Added Member To Class: ClassName=Sheet4_Switch Member=Component CS10 QMatrix Button
+Added Member To Class: ClassName=Sheet3_Bat Member=Component R10 Thick Film

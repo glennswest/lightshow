@@ -1,0 +1,103 @@
+Protel Design System Design Rule Check
+PCB File : Z:\3dprinter\lightshow\lightshowctl\lightshowctl.PcbDoc
+Date     : 21/08/2016
+Time     : 16:14:08
+
+Processing Rule : Room Sheet4_Switch (Bounding Region = (0mil, 0mil, 2000mil, 1000mil) (InComponentClass('Sheet4_Switch'))
+Rule Violations :0
+
+Processing Rule : Room Sheet3_Bat (Bounding Region = (0mil, 0mil, 2000mil, 1000mil) (InComponentClass('Sheet3_Bat'))
+   Violation between Room Definition: Between SMT Small Component C10-10µ (40240mil,19240mil) on Component Side And Room Sheet3_Bat (Bounding Region = (0mil, 0mil, 2000mil, 1000mil) (InComponentClass('Sheet3_Bat')) 
+   Violation between Room Definition: Between SMT Small Component R7-Thick Film (40470mil,19240mil) on Component Side And Room Sheet3_Bat (Bounding Region = (0mil, 0mil, 2000mil, 1000mil) (InComponentClass('Sheet3_Bat')) 
+   Violation between Room Definition: Between SIP Component B1-BK-18650-PC2 (40270mil,16295mil) on Component Side And Room Sheet3_Bat (Bounding Region = (0mil, 0mil, 2000mil, 1000mil) (InComponentClass('Sheet3_Bat')) 
+Rule Violations :3
+
+Processing Rule : Room Sheet2_led (Bounding Region = (0mil, 0mil, 2000mil, 1000mil) (InComponentClass('Sheet2_led'))
+Rule Violations :0
+
+Processing Rule : Room Sheet1_Cpu (Bounding Region = (0mil, 0mil, 2000mil, 1000mil) (InComponentClass('Sheet1_Cpu'))
+   Violation between Room Definition: Between LCC Component U1-SAMD21TQFP64 (40275.591mil,18307.087mil) on Component Side And Room Sheet1_Cpu (Bounding Region = (0mil, 0mil, 2000mil, 1000mil) (InComponentClass('Sheet1_Cpu')) 
+   Violation between Room Definition: Between SMT Small Component C1 (40059.055mil,18612.205mil) on Component Side And Room Sheet1_Cpu (Bounding Region = (0mil, 0mil, 2000mil, 1000mil) (InComponentClass('Sheet1_Cpu')) 
+   Violation between Room Definition: Between SMT Small Component C9-CAP-NONPOL (40120mil,19720mil) on Component Side And Room Sheet1_Cpu (Bounding Region = (0mil, 0mil, 2000mil, 1000mil) (InComponentClass('Sheet1_Cpu')) 
+   Violation between Room Definition: Between SMT Small Component C3 (39940.945mil,18228.346mil) on Component Side And Room Sheet1_Cpu (Bounding Region = (0mil, 0mil, 2000mil, 1000mil) (InComponentClass('Sheet1_Cpu')) 
+   Violation between Room Definition: Between SMT Small Component C5 (40515mil,19585mil) on Component Side And Room Sheet1_Cpu (Bounding Region = (0mil, 0mil, 2000mil, 1000mil) (InComponentClass('Sheet1_Cpu')) 
+   Violation between Room Definition: Between SMT Small Component C7 (40177.165mil,14330.709mil) on Component Side And Room Sheet1_Cpu (Bounding Region = (0mil, 0mil, 2000mil, 1000mil) (InComponentClass('Sheet1_Cpu')) 
+   Violation between Room Definition: Between SMT Small Component C6-CAP-NONPOL (40600.394mil,18395.669mil) on Component Side And Room Sheet1_Cpu (Bounding Region = (0mil, 0mil, 2000mil, 1000mil) (InComponentClass('Sheet1_Cpu')) 
+   Violation between Room Definition: Between SMT Small Component C8-CAP-NONPOL (40600.394mil,18120.079mil) on Component Side And Room Sheet1_Cpu (Bounding Region = (0mil, 0mil, 2000mil, 1000mil) (InComponentClass('Sheet1_Cpu')) 
+   Violation between Room Definition: Between SIP Component J3-ZX62D-AB-5P8 (40295.276mil,19970.472mil) on Component Side And Room Sheet1_Cpu (Bounding Region = (0mil, 0mil, 2000mil, 1000mil) (InComponentClass('Sheet1_Cpu')) 
+   Violation between Room Definition: Between SMT Small Component R6-R2 (40165mil,19720mil) on Component Side And Room Sheet1_Cpu (Bounding Region = (0mil, 0mil, 2000mil, 1000mil) (InComponentClass('Sheet1_Cpu')) 
+Rule Violations :10
+
+Processing Rule : SMD Neck-Down Constraint (Percent=50%) (All)
+   Violation between SMD Neck-Down Constraint: Between Pad U1-7(40051.182mil,18336.614mil) on Component Side And Track (40051.182mil,18336.614mil)(40079.804mil,18336.614mil) on Component Side Relative Track Width: 56%
+   Violation between SMD Neck-Down Constraint: Between Pad U1-8(40051.182mil,18316.93mil) on Component Side And Track (40022.56mil,18316.93mil)(40051.182mil,18316.93mil) on Component Side Relative Track Width: 56%
+   Violation between SMD Neck-Down Constraint: Between Pad U1-21(40206.694mil,18082.678mil) on Component Side And Track (40206.694mil,18082.678mil)(40206.694mil,18111.3mil) on Component Side Relative Track Width: 56%
+   Violation between SMD Neck-Down Constraint: Between Pad U1-22(40226.378mil,18082.678mil) on Component Side And Track (40226.378mil,18054.056mil)(40226.378mil,18082.678mil) on Component Side Relative Track Width: 56%
+   Violation between SMD Neck-Down Constraint: Between Pad U1-33(40500mil,18159.448mil) on Component Side And Track (40471.378mil,18159.448mil)(40500mil,18159.448mil) on Component Side Relative Track Width: 56%
+   Violation between SMD Neck-Down Constraint: Between Pad U1-34(40500mil,18179.134mil) on Component Side And Track (40500mil,18179.134mil)(40526.438mil,18179.134mil) on Component Side Relative Track Width: 56%
+   Violation between SMD Neck-Down Constraint: Between Pad U1-48(40500mil,18454.724mil) on Component Side And Track (40500mil,18454.724mil)(40528.622mil,18454.724mil) on Component Side Relative Track Width: 56%
+   Violation between SMD Neck-Down Constraint: Between Pad U2-2(40270.31mil,18991.93mil) on Component Side And Track (40270.31mil,18962.326mil)(40270.31mil,18991.93mil) on Component Side Relative Track Width: 60%
+   Violation between SMD Neck-Down Constraint: Between Pad U2-4(40309.69mil,18991.93mil) on Component Side And Track (40309.69mil,18962.326mil)(40309.69mil,18991.93mil) on Component Side Relative Track Width: 60%
+   Violation between SMD Neck-Down Constraint: Between Pad U2-12(40230.94mil,19040.16mil) on Component Side And Track (40204.286mil,19040.16mil)(40230.94mil,19040.16mil) on Component Side Relative Track Width: 64%
+   Violation between SMD Neck-Down Constraint: Between Pad U2-14(40349.06mil,19040.16mil) on Component Side And Track (40349.06mil,19040.16mil)(40375.714mil,19040.16mil) on Component Side Relative Track Width: 64%
+Rule Violations :11
+
+Processing Rule : Modified Polygon (Allow modified: No), (Allow shelved: No)
+Rule Violations :0
+
+Processing Rule : Net Antennae (Tolerance=0mil) (All)
+Rule Violations :0
+
+Processing Rule : Silk primitive without silk layer
+Rule Violations :0
+
+Processing Rule : Silk to Silk (Clearance=6mil) (All),(All)
+   Violation between Silk To Silk Clearance Constraint: (5.84mil < 6mil) Between Text "C14" (40420mil,18790mil) on Top Overlay And Track (40405.512mil,18742.126mil)(40405.512mil,18779.528mil) on Top Overlay Silk Text to Silk Clearance [5.84mil]
+   Violation between Silk To Silk Clearance Constraint: (5.84mil < 6mil) Between Text "C14" (40420mil,18790mil) on Top Overlay And Track (40405.512mil,18779.528mil)(40708.662mil,18779.528mil) on Top Overlay Silk Text to Silk Clearance [5.84mil]
+Rule Violations :2
+
+Processing Rule : Silk To Solder Mask (Clearance=4mil) (IsPad),(All)
+   Violation between Silk To Solder Mask Clearance Constraint: (Collision < 4mil) Between Track (40545.276mil,13370.748mil)(40545.276mil,14015.748mil) on Top Overlay And Pad J1-MOUNT3(40535.436mil,13417.318mil) on Component Side [Top Overlay] to [Top Solder] clearance [0mil]
+Rule Violations :1
+
+Processing Rule : Minimum Solder Mask Sliver (Gap=0.039mil) (All),(All)
+Rule Violations :0
+
+Processing Rule : Hole To Hole Clearance (Gap=10mil) (All),(All)
+Rule Violations :0
+
+Processing Rule : Hole Size Constraint (Min=1mil) (Max=393.701mil) (All)
+Rule Violations :0
+
+Processing Rule : Height Constraint (Min=0mil) (Max=1968.504mil) (Prefered=500mil) (All)
+   Violation between Height Constraint: SIP Component B1-BK-18650-PC2 (40270mil,16295mil) on Component Side Actual Height = 3937.008mil
+Rule Violations :1
+
+Processing Rule : Width Constraint (Min=5mil) (Max=100mil) (Preferred=7mil) (All)
+Rule Violations :0
+
+Processing Rule : Power Plane Connect Rule(Direct Connect )(Expansion=20mil) (Conductor Width=10mil) (Air Gap=10mil) (Entries=4) (All)
+Rule Violations :0
+
+Processing Rule : Clearance Constraint (Gap=5mil) (All),(All)
+   Violation between Clearance Constraint: (Collision < 5mil) Between Region (0 hole(s)) Solder Side And Track (39830.472mil,17340.316mil)(40110.472mil,17340.316mil) on Keep-Out Layer 
+   Violation between Clearance Constraint: (Collision < 5mil) Between Region (0 hole(s)) Solder Side And Track (39830.472mil,16867.874mil)(40110.472mil,16867.874mil) on Keep-Out Layer 
+   Violation between Clearance Constraint: (Collision < 5mil) Between Region (0 hole(s)) Solder Side And Track (39830.472mil,16395.434mil)(40110.472mil,16395.434mil) on Keep-Out Layer 
+   Violation between Clearance Constraint: (Collision < 5mil) Between Region (0 hole(s)) Solder Side And Track (39830.472mil,15922.992mil)(40110.472mil,15922.992mil) on Keep-Out Layer 
+   Violation between Clearance Constraint: (Collision < 5mil) Between Region (0 hole(s)) Solder Side And Track (39830.472mil,15450.552mil)(40110.472mil,15450.552mil) on Keep-Out Layer 
+   Violation between Clearance Constraint: (Collision < 5mil) Between Region (0 hole(s)) Solder Side And Track (40450.552mil,17340.316mil)(40730.552mil,17340.316mil) on Keep-Out Layer 
+   Violation between Clearance Constraint: (Collision < 5mil) Between Region (0 hole(s)) Solder Side And Track (40450.552mil,16867.874mil)(40730.552mil,16867.874mil) on Keep-Out Layer 
+   Violation between Clearance Constraint: (Collision < 5mil) Between Region (0 hole(s)) Solder Side And Track (40450.552mil,16395.434mil)(40730.552mil,16395.434mil) on Keep-Out Layer 
+   Violation between Clearance Constraint: (Collision < 5mil) Between Region (0 hole(s)) Solder Side And Track (40450.552mil,15922.992mil)(40730.552mil,15922.992mil) on Keep-Out Layer 
+   Violation between Clearance Constraint: (Collision < 5mil) Between Region (0 hole(s)) Solder Side And Track (40450.552mil,15450.552mil)(40730.552mil,15450.552mil) on Keep-Out Layer 
+Rule Violations :10
+
+Processing Rule : Un-Routed Net Constraint ( (All) )
+Rule Violations :0
+
+Processing Rule : Short-Circuit Constraint (Allowed=No) (All),(All)
+Rule Violations :0
+
+
+Violations Detected : 38
+Time Elapsed        : 00:00:02

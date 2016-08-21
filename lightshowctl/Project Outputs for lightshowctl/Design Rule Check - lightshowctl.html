@@ -1,0 +1,490 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html">
+<style type="text/css">
+		h1, h2, h3, h4, h5, h6 {
+			font-family : segoe ui;
+			color : black;
+			background-color : #EDE7D9;
+			padding: 0.3em;
+		}
+
+		h1 {
+			font-size: 1.2em;
+		}		
+
+		h2 {
+			font-size: 1.2em;
+		}
+
+		body {
+			font-family : segoe ui;
+		}
+
+		td, th {
+			padding: 0.5em;
+			text-align : left;
+			width: 10em;
+		}
+		th {
+			background-color : #EEEEEE;
+
+		}
+		th.column1, td.column1 {
+			text-align: left;
+			width : auto;
+		}
+		table {
+			width : 100%;
+			font-size: 0.9em;
+		}
+
+		.DRC_summary_header {
+			padding-bottom : 0.1em;
+			border : 0px solid black;
+			width: 100%;
+			align: left;
+		}
+
+		.DRC_summary_header_col1,
+		.DRC_summary_header_col2, 
+		.DRC_summary_header_col3 {
+			color : black;
+			font-size:100%;
+			padding : 0em;
+			padding-top : 0.2em;
+			padding-bottom 0.2em;
+			border : 0px solid black;
+			vertical-align: top;
+			text-align: left;
+		}
+
+		.DRC_summary_header_col1 {
+			font-weight: bold;
+			width: 8em;
+		}
+
+		.DRC_summary_header_col2 {
+			width: 0.1em;
+		
+		}
+
+		.DRC_summary_header_col3 {
+			width : auto;
+		}
+
+		.header_holder {
+		    Width = 100%;
+		    border = 0px solid green;
+		    padding = 0;
+		}
+
+
+		.front_matter, .front_matter_column1, .front_matter_column2, .front_matter_column3
+		{
+			left : 0;
+			top : 0;
+			padding: 0em;
+			padding-top : 0.1em;
+			border : 0px solid black;
+			width : 100%;
+			vertical-align: top;
+			text-align: left;
+		}
+
+		.front_matter_column1 {
+			width : 8em;
+			font-weight: bold;
+		}
+
+		.front_matter_column2 {
+			width: 0.1em;
+		}
+
+		.front_matter_column3 {
+			width : auto;
+		}
+
+		.total_column1, .total_column {
+			font-weight : bold;
+		}
+		.total_column1 {
+			text-align : left;
+		}
+		.warning, .error {
+			color : red;
+			font-weight : bold;
+		}
+		tr.onmouseout_odd {
+			background-color : #white;
+		}
+		tr.onmouseout_even { 
+			background-color : #FAFAFA;
+		}
+		tr.onmouseover_odd, tr.onmouseover_even { 
+			background-color : #EEEEEE;
+		} 
+		a:link, a:visited, .q a:link,.q a:active,.q {
+			color: #21489e; 
+		}
+		a:link.callback, a:visited.callback { 
+			color: #21489e;
+		}
+		a:link.customize, a:visited.customize {
+			color: #C0C0C0;
+			position: absolute; 
+			right: 10px;
+		}	
+		p.contents_level1 {
+			font-weight : bold;
+			font-size : 110%;
+			margin : 0.5em;
+		}
+		p.contents_level2 {
+			position : relative;
+			left : 20px;
+			margin : 0.5em;
+		}
+	</style><script type="text/javascript">
+		function coordToMils(coord) {
+			var number = coord / 10000;
+			
+			if (number != number.toFixed(3))
+				number = number.toFixed(3);
+
+			return number + 'mil'
+		}
+
+		function coordToMM(coord) {
+			var number = 0.0254 * coord / 10000;
+			
+			if (number != number.toFixed(4))
+				number = number.toFixed(4);
+			
+			return number + 'mm'
+		}
+	
+		function convertCoord(coordNode, units) {
+			for (var i = 0; i < coordNode.childNodes.length; i++) {
+				coordNode.removeChild(coordNode.childNodes[i]);
+			}
+
+			var coord = coordNode.getAttribute('value');
+			if (coord != null) {
+				if (units == 'mm') {
+					textNode = document.createTextNode(coordToMM(coord));
+					coordNode.appendChild(textNode);
+				} else if (units == 'mil') {
+					textNode = document.createTextNode(coordToMils(coord));		
+					coordNode.appendChild(textNode);	
+				}
+			}
+		}
+	
+		function convertUnits(unitNode, units) {
+			for (var i = 0; i < unitNode.childNodes.length; i++) {
+				unitNode.removeChild(unitNode.childNodes[i]);		
+			}
+		
+			textNode = document.createTextNode(units); 
+			unitNode.appendChild(textNode);
+		}
+	
+		function changeUnits(radio_input, units) {
+			if (radio_input.checked) {
+			
+				var elements = document.getElementsByName('coordinate');
+				if (elements) {
+					for (var i = 0; i < elements.length; i++) {
+						convertCoord(elements[i], units);
+					}
+				}
+	
+				var elements = document.getElementsByName('units');
+				if (elements) {
+					for (var i = 0; i < elements.length; i++) {
+						convertUnits(elements[i], units);
+					}
+				}
+			}
+		}
+	</script><title>Design Rule Verification Report</title>
+</head>
+<body onload=""><img ALT="Altium" src="
+			file://C:\Users\Public\Documents\Altium\AD16\Templates\AD_logo.png
+		"><h1>Design Rule Verification Report</h1>
+<table class="header_holder">
+<td class="column1">
+<table class="front_matter">
+<tr class="front_matter">
+<td class="front_matter_column1">Date:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">21/08/2016</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Time:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">16:14:08</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Elapsed Time:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">00:00:02</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Filename:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3"><a href="file:///Z:\3dprinter\lightshow\lightshowctl\lightshowctl.PcbDoc" class="file"><acronym title="Z:\3dprinter\lightshow\lightshowctl\lightshowctl.PcbDoc">Z:\3dprinter\lightshow\lightshowctl\lightshowctl.PcbDoc</acronym></a></td>
+</tr>
+</table>
+</td>
+<td class="column2">
+<table class="DRC_summary_header">
+<tr>
+<td class="DRC_summary_header_col1">Warnings:</td>
+<td class="DRC_summary_header_col2"></td>
+<td class="DRC_summary_header_col3">0</td></tr>
+<tr>
+<td class="DRC_summary_header_col1">Rule Violations:</td>
+<td class="DRC_summary_header_col2"></td>
+<td class="DRC_summary_header_col3" style="color : red">38</td></tr>
+</table>
+</td>
+</table><a name="IDLEXEHDMEOZAFF2R4M4XK51NIMENYZAGFW2HGHYKD1C15WBRZRWIE"><h2>Summary</h2></a><table>
+<tr>
+<th class="column1">Warnings</th>
+<th class="column2">Count</th>
+</tr>
+<tr>
+<td style="font-weight : bold; text-align : right" class="column1">Total</td>
+<td style="font-weight : bold" class="column2">0</td>
+</tr>
+</table><br><table>
+<tr>
+<th class="column1">Rule Violations</th>
+<th class="column2">Count</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#ID0EHXBFP2DJHOENZTDQY5D3Y4MO5M1YGZXXTSSGFOPRXH0KQEKUWO">Room Sheet4_Switch (Bounding Region = (0mil, 0mil, 2000mil, 1000mil) (InComponentClass('Sheet4_Switch'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDKK0XJQACNURPFE3ZIBE1N1G03CXJRQH4AX2CXRF0BGU0MJWKBKBE">Room Sheet3_Bat (Bounding Region = (0mil, 0mil, 2000mil, 1000mil) (InComponentClass('Sheet3_Bat'))</a></td>
+<td class="column2">3</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDZHC4OXBZFT4OW3C5UAEJHNICEEDBMFUJ1POAZH31NGICBU0FPUM">Room Sheet2_led (Bounding Region = (0mil, 0mil, 2000mil, 1000mil) (InComponentClass('Sheet2_led'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDNKI3IO1F3ZAED0DK31WDEGUY1PTRPZJTA1TY3XODK03IXI3MZXRN">Room Sheet1_Cpu (Bounding Region = (0mil, 0mil, 2000mil, 1000mil) (InComponentClass('Sheet1_Cpu'))</a></td>
+<td class="column2">10</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDH5WNFXPOYRQOP5DXA0NVLEANQHCVZMW1S4ST5ZKTZ3UT0UW10HDP">SMD Neck-Down Constraint (Percent=50%) (All)</a></td>
+<td class="column2">11</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDJSIBSKHDQZOPH52XP1GDYZM13O42NWEGLFMNDQK1O1UXC4IFH55P">Modified Polygon (Allow modified: No), (Allow shelved: No)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDO4LG0NNACPYOGMED3DCCUVU1HNM3ZIDDTYB5OBU4LYUJDLTGLN">Net Antennae (Tolerance=0mil) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDMRLGNJAF2LL4MHUKWHPC5ZI4YCVLPF4B0HXLNKD4C512SITHB1SL">Silk primitive without silk layer</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#ID0CWX4GMSMXAFH1J35033XPOBGPRH14RM3CHQPKD1CAWD4GP3T0T">Silk to Silk (Clearance=6mil) (All),(All)</a></td>
+<td class="column2">2</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDWGROVASTDQT0J5IUNOOYMTP1DDSEB2EQRIFFRUC4GF2N2PVKWYUC">Silk To Solder Mask (Clearance=4mil) (IsPad),(All)</a></td>
+<td class="column2">1</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDIC1E1X5GVH5UFXRCJTMEMZQK5HSHCLUVIILTPSNYIOHM3B2LRNG">Minimum Solder Mask Sliver (Gap=0.039mil) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDN3TIQTYYLC1CI04IXB3OTFLELDU30ARXR4NP1ICNR0F4A5SU1MRE">Hole To Hole Clearance (Gap=10mil) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDFLVRURQ3ECH1G1IVJTRBZU255B0BOQAFP12KIQDTYVXPUNZ5NE0J">Hole Size Constraint (Min=1mil) (Max=393.701mil) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDYC5WWNFMTWG1VN1ELYU4DS0PPNQLFAGBLD15AIKGWQHA3RCX0WE">Height Constraint (Min=0mil) (Max=1968.504mil) (Prefered=500mil) (All)</a></td>
+<td class="column2">1</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDGG5K0GIO5MHJIJNJHY1YOW4UHKPDZ1T1WPPIBIG0JFJNDKTH1XJD">Width Constraint (Min=5mil) (Max=100mil) (Preferred=7mil) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDEEXCKJCV3PY2PNCZEHTQLDO5QNW50UXSGLK1QDOUSGZ1E41CIYRF">Power Plane Connect Rule(Direct Connect )(Expansion=20mil) (Conductor Width=10mil) (Air Gap=10mil) (Entries=4) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDZRJNHWMCPSX5PRDWWSXAVBGQIKSL3SBKN0BJB4MGV3AYN25BYVZF">Clearance Constraint (Gap=5mil) (All),(All)</a></td>
+<td class="column2">10</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDRUTC2PFG2ZWIOJ1VVBK1RAGVEIGXTWPNEIKMBYMENBXIBEZQ3IMD">Un-Routed Net Constraint ( (All) )</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDN54EKZHSQEGQDRES01OX5ET2GNVMPWW3QACDTXD4DXOAKAILLSTM">Short-Circuit Constraint (Allowed=No) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr>
+<td style="font-weight : bold; text-align : right" class="column1">Total</td>
+<td style="font-weight : bold" class="column2">38</td>
+</tr>
+</table><br><a name="IDKK0XJQACNURPFE3ZIBE1N1G03CXJRQH4AX2CXRF0BGU0MJWKBKBE"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Room Sheet3_Bat (Bounding Region = (0mil, 0mil, 2000mil, 1000mil) (InComponentClass('Sheet3_Bat'))</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=Z:\3dprinter\lightshow\lightshowctl\lightshowctl.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=40289.744mil|Location1.Y=0mil|Location2.Y=19316.772mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=Z:\3dprinter\lightshow\lightshowctl\lightshowctl.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=40289.744mil|Location1.Y=0mil|Location2.Y=19316.772mil|Absolute=True">Room Definition: Between SMT Small Component C10-10µ (40240mil,19240mil) on Component Side And Room Sheet3_Bat (Bounding Region = (0mil, 0mil, 2000mil, 1000mil) (InComponentClass('Sheet3_Bat')) </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=Z:\3dprinter\lightshow\lightshowctl\lightshowctl.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=40505.433mil|Location1.Y=0mil|Location2.Y=19304.961mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=Z:\3dprinter\lightshow\lightshowctl\lightshowctl.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=40505.433mil|Location1.Y=0mil|Location2.Y=19304.961mil|Absolute=True">Room Definition: Between SMT Small Component R7-Thick Film (40470mil,19240mil) on Component Side And Room Sheet3_Bat (Bounding Region = (0mil, 0mil, 2000mil, 1000mil) (InComponentClass('Sheet3_Bat')) </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=Z:\3dprinter\lightshow\lightshowctl\lightshowctl.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=40688.386mil|Location1.Y=0mil|Location2.Y=17992.914mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=Z:\3dprinter\lightshow\lightshowctl\lightshowctl.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=40688.386mil|Location1.Y=0mil|Location2.Y=17992.914mil|Absolute=True">Room Definition: Between SIP Component B1-BK-18650-PC2 (40270mil,16295mil) on Component Side And Room Sheet3_Bat (Bounding Region = (0mil, 0mil, 2000mil, 1000mil) (InComponentClass('Sheet3_Bat')) </acronym></a><br></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br><a name="IDNKI3IO1F3ZAED0DK31WDEGUY1PTRPZJTA1TY3XODK03IXI3MZXRN"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Room Sheet1_Cpu (Bounding Region = (0mil, 0mil, 2000mil, 1000mil) (InComponentClass('Sheet1_Cpu'))</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=Z:\3dprinter\lightshow\lightshowctl\lightshowctl.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=40532.48mil|Location1.Y=0mil|Location2.Y=18563.976mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=Z:\3dprinter\lightshow\lightshowctl\lightshowctl.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=40532.48mil|Location1.Y=0mil|Location2.Y=18563.976mil|Absolute=True">Room Definition: Between LCC Component U1-SAMD21TQFP64 (40275.591mil,18307.087mil) on Component Side And Room Sheet1_Cpu (Bounding Region = (0mil, 0mil, 2000mil, 1000mil) (InComponentClass('Sheet1_Cpu')) </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=Z:\3dprinter\lightshow\lightshowctl\lightshowctl.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=40090.552mil|Location1.Y=0mil|Location2.Y=18653.542mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=Z:\3dprinter\lightshow\lightshowctl\lightshowctl.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=40090.552mil|Location1.Y=0mil|Location2.Y=18653.542mil|Absolute=True">Room Definition: Between SMT Small Component C1 (40059.055mil,18612.205mil) on Component Side And Room Sheet1_Cpu (Bounding Region = (0mil, 0mil, 2000mil, 1000mil) (InComponentClass('Sheet1_Cpu')) </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=Z:\3dprinter\lightshow\lightshowctl\lightshowctl.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=40143.622mil|Location1.Y=0mil|Location2.Y=19771.18mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=Z:\3dprinter\lightshow\lightshowctl\lightshowctl.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=40143.622mil|Location1.Y=0mil|Location2.Y=19771.18mil|Absolute=True">Room Definition: Between SMT Small Component C9-CAP-NONPOL (40120mil,19720mil) on Component Side And Room Sheet1_Cpu (Bounding Region = (0mil, 0mil, 2000mil, 1000mil) (InComponentClass('Sheet1_Cpu')) </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=Z:\3dprinter\lightshow\lightshowctl\lightshowctl.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=39982.283mil|Location1.Y=0mil|Location2.Y=18339.567mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=Z:\3dprinter\lightshow\lightshowctl\lightshowctl.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=39982.283mil|Location1.Y=0mil|Location2.Y=18339.567mil|Absolute=True">Room Definition: Between SMT Small Component C3 (39940.945mil,18228.346mil) on Component Side And Room Sheet1_Cpu (Bounding Region = (0mil, 0mil, 2000mil, 1000mil) (InComponentClass('Sheet1_Cpu')) </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=Z:\3dprinter\lightshow\lightshowctl\lightshowctl.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=40556.338mil|Location1.Y=0mil|Location2.Y=19616.497mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=Z:\3dprinter\lightshow\lightshowctl\lightshowctl.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=40556.338mil|Location1.Y=0mil|Location2.Y=19616.497mil|Absolute=True">Room Definition: Between SMT Small Component C5 (40515mil,19585mil) on Component Side And Room Sheet1_Cpu (Bounding Region = (0mil, 0mil, 2000mil, 1000mil) (InComponentClass('Sheet1_Cpu')) </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=Z:\3dprinter\lightshow\lightshowctl\lightshowctl.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=40288.387mil|Location1.Y=0mil|Location2.Y=14372.047mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=Z:\3dprinter\lightshow\lightshowctl\lightshowctl.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=40288.387mil|Location1.Y=0mil|Location2.Y=14372.047mil|Absolute=True">Room Definition: Between SMT Small Component C7 (40177.165mil,14330.709mil) on Component Side And Room Sheet1_Cpu (Bounding Region = (0mil, 0mil, 2000mil, 1000mil) (InComponentClass('Sheet1_Cpu')) </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=Z:\3dprinter\lightshow\lightshowctl\lightshowctl.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=40624.016mil|Location1.Y=0mil|Location2.Y=18446.851mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=Z:\3dprinter\lightshow\lightshowctl\lightshowctl.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=40624.016mil|Location1.Y=0mil|Location2.Y=18446.851mil|Absolute=True">Room Definition: Between SMT Small Component C6-CAP-NONPOL (40600.394mil,18395.669mil) on Component Side And Room Sheet1_Cpu (Bounding Region = (0mil, 0mil, 2000mil, 1000mil) (InComponentClass('Sheet1_Cpu')) </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=Z:\3dprinter\lightshow\lightshowctl\lightshowctl.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=40624.016mil|Location1.Y=0mil|Location2.Y=18171.258mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=Z:\3dprinter\lightshow\lightshowctl\lightshowctl.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=40624.016mil|Location1.Y=0mil|Location2.Y=18171.258mil|Absolute=True">Room Definition: Between SMT Small Component C8-CAP-NONPOL (40600.394mil,18120.079mil) on Component Side And Room Sheet1_Cpu (Bounding Region = (0mil, 0mil, 2000mil, 1000mil) (InComponentClass('Sheet1_Cpu')) </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=Z:\3dprinter\lightshow\lightshowctl\lightshowctl.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=40492.442mil|Location1.Y=0mil|Location2.Y=20075.786mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=Z:\3dprinter\lightshow\lightshowctl\lightshowctl.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=40492.442mil|Location1.Y=0mil|Location2.Y=20075.786mil|Absolute=True">Room Definition: Between SIP Component J3-ZX62D-AB-5P8 (40295.276mil,19970.472mil) on Component Side And Room Sheet1_Cpu (Bounding Region = (0mil, 0mil, 2000mil, 1000mil) (InComponentClass('Sheet1_Cpu')) </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=Z:\3dprinter\lightshow\lightshowctl\lightshowctl.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=40181.732mil|Location1.Y=0mil|Location2.Y=19757.4mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=Z:\3dprinter\lightshow\lightshowctl\lightshowctl.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=40181.732mil|Location1.Y=0mil|Location2.Y=19757.4mil|Absolute=True">Room Definition: Between SMT Small Component R6-R2 (40165mil,19720mil) on Component Side And Room Sheet1_Cpu (Bounding Region = (0mil, 0mil, 2000mil, 1000mil) (InComponentClass('Sheet1_Cpu')) </acronym></a><br></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br><a name="IDH5WNFXPOYRQOP5DXA0NVLEANQHCVZMW1S4ST5ZKTZ3UT0UW10HDP"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">SMD Neck-Down Constraint (Percent=50%) (All)</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=Z:\3dprinter\lightshow\lightshowctl\lightshowctl.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=40045.182mil|Location2.X=40099.271mil|Location1.Y=18330.614mil|Location2.Y=18347.353mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=Z:\3dprinter\lightshow\lightshowctl\lightshowctl.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=40045.182mil|Location2.X=40099.271mil|Location1.Y=18330.614mil|Location2.Y=18347.353mil|Absolute=True">SMD Neck-Down Constraint: Between Pad U1-7(40051.182mil,18336.614mil) on Component Side And Track (40051.182mil,18336.614mil)(40079.804mil,18336.614mil) on Component Side Relative Track Width: 56%</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=Z:\3dprinter\lightshow\lightshowctl\lightshowctl.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=40045.182mil|Location2.X=40099.271mil|Location1.Y=18310.93mil|Location2.Y=18327.669mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=Z:\3dprinter\lightshow\lightshowctl\lightshowctl.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=40045.182mil|Location2.X=40099.271mil|Location1.Y=18310.93mil|Location2.Y=18327.669mil|Absolute=True">SMD Neck-Down Constraint: Between Pad U1-8(40051.182mil,18316.93mil) on Component Side And Track (40022.56mil,18316.93mil)(40051.182mil,18316.93mil) on Component Side Relative Track Width: 56%</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=Z:\3dprinter\lightshow\lightshowctl\lightshowctl.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=40200.694mil|Location2.X=40254.783mil|Location1.Y=18076.678mil|Location2.Y=18093.417mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=Z:\3dprinter\lightshow\lightshowctl\lightshowctl.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=40200.694mil|Location2.X=40254.783mil|Location1.Y=18076.678mil|Location2.Y=18093.417mil|Absolute=True">SMD Neck-Down Constraint: Between Pad U1-21(40206.694mil,18082.678mil) on Component Side And Track (40206.694mil,18082.678mil)(40206.694mil,18111.3mil) on Component Side Relative Track Width: 56%</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=Z:\3dprinter\lightshow\lightshowctl\lightshowctl.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=40220.378mil|Location2.X=40274.467mil|Location1.Y=18076.678mil|Location2.Y=18093.417mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=Z:\3dprinter\lightshow\lightshowctl\lightshowctl.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=40220.378mil|Location2.X=40274.467mil|Location1.Y=18076.678mil|Location2.Y=18093.417mil|Absolute=True">SMD Neck-Down Constraint: Between Pad U1-22(40226.378mil,18082.678mil) on Component Side And Track (40226.378mil,18054.056mil)(40226.378mil,18082.678mil) on Component Side Relative Track Width: 56%</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=Z:\3dprinter\lightshow\lightshowctl\lightshowctl.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=40494mil|Location2.X=40548.089mil|Location1.Y=18153.448mil|Location2.Y=18170.187mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=Z:\3dprinter\lightshow\lightshowctl\lightshowctl.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=40494mil|Location2.X=40548.089mil|Location1.Y=18153.448mil|Location2.Y=18170.187mil|Absolute=True">SMD Neck-Down Constraint: Between Pad U1-33(40500mil,18159.448mil) on Component Side And Track (40471.378mil,18159.448mil)(40500mil,18159.448mil) on Component Side Relative Track Width: 56%</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=Z:\3dprinter\lightshow\lightshowctl\lightshowctl.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=40494mil|Location2.X=40548.089mil|Location1.Y=18173.134mil|Location2.Y=18189.873mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=Z:\3dprinter\lightshow\lightshowctl\lightshowctl.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=40494mil|Location2.X=40548.089mil|Location1.Y=18173.134mil|Location2.Y=18189.873mil|Absolute=True">SMD Neck-Down Constraint: Between Pad U1-34(40500mil,18179.134mil) on Component Side And Track (40500mil,18179.134mil)(40526.438mil,18179.134mil) on Component Side Relative Track Width: 56%</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=Z:\3dprinter\lightshow\lightshowctl\lightshowctl.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=40494mil|Location2.X=40548.089mil|Location1.Y=18448.724mil|Location2.Y=18465.463mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=Z:\3dprinter\lightshow\lightshowctl\lightshowctl.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=40494mil|Location2.X=40548.089mil|Location1.Y=18448.724mil|Location2.Y=18465.463mil|Absolute=True">SMD Neck-Down Constraint: Between Pad U1-48(40500mil,18454.724mil) on Component Side And Track (40500mil,18454.724mil)(40528.622mil,18454.724mil) on Component Side Relative Track Width: 56%</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=Z:\3dprinter\lightshow\lightshowctl\lightshowctl.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=40264.31mil|Location2.X=40318.399mil|Location1.Y=18985.93mil|Location2.Y=19002.669mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=Z:\3dprinter\lightshow\lightshowctl\lightshowctl.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=40264.31mil|Location2.X=40318.399mil|Location1.Y=18985.93mil|Location2.Y=19002.669mil|Absolute=True">SMD Neck-Down Constraint: Between Pad U2-2(40270.31mil,18991.93mil) on Component Side And Track (40270.31mil,18962.326mil)(40270.31mil,18991.93mil) on Component Side Relative Track Width: 60%</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=Z:\3dprinter\lightshow\lightshowctl\lightshowctl.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=40303.69mil|Location2.X=40357.779mil|Location1.Y=18985.93mil|Location2.Y=19002.669mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=Z:\3dprinter\lightshow\lightshowctl\lightshowctl.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=40303.69mil|Location2.X=40357.779mil|Location1.Y=18985.93mil|Location2.Y=19002.669mil|Absolute=True">SMD Neck-Down Constraint: Between Pad U2-4(40309.69mil,18991.93mil) on Component Side And Track (40309.69mil,18962.326mil)(40309.69mil,18991.93mil) on Component Side Relative Track Width: 60%</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=Z:\3dprinter\lightshow\lightshowctl\lightshowctl.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=40224.94mil|Location2.X=40279.029mil|Location1.Y=19034.16mil|Location2.Y=19050.899mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=Z:\3dprinter\lightshow\lightshowctl\lightshowctl.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=40224.94mil|Location2.X=40279.029mil|Location1.Y=19034.16mil|Location2.Y=19050.899mil|Absolute=True">SMD Neck-Down Constraint: Between Pad U2-12(40230.94mil,19040.16mil) on Component Side And Track (40204.286mil,19040.16mil)(40230.94mil,19040.16mil) on Component Side Relative Track Width: 64%</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=Z:\3dprinter\lightshow\lightshowctl\lightshowctl.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=40343.06mil|Location2.X=40397.149mil|Location1.Y=19034.16mil|Location2.Y=19050.899mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=Z:\3dprinter\lightshow\lightshowctl\lightshowctl.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=40343.06mil|Location2.X=40397.149mil|Location1.Y=19034.16mil|Location2.Y=19050.899mil|Absolute=True">SMD Neck-Down Constraint: Between Pad U2-14(40349.06mil,19040.16mil) on Component Side And Track (40349.06mil,19040.16mil)(40375.714mil,19040.16mil) on Component Side Relative Track Width: 64%</acronym></a><br></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br><a name="ID0CWX4GMSMXAFH1J35033XPOBGPRH14RM3CHQPKD1CAWD4GP3T0T"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Silk to Silk (Clearance=6mil) (All),(All)</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=Z:\3dprinter\lightshow\lightshowctl\lightshowctl.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=40401.887mil|Location2.X=40409.137mil|Location1.Y=18780.792mil|Location2.Y=18788.042mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=Z:\3dprinter\lightshow\lightshowctl\lightshowctl.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=40401.887mil|Location2.X=40409.137mil|Location1.Y=18780.792mil|Location2.Y=18788.042mil|Absolute=True">Silk To Silk Clearance Constraint: (5.84mil &lt; 6mil) Between Text "C14" (40420mil,18790mil) on Top Overlay And Track (40405.512mil,18742.126mil)(40405.512mil,18779.528mil) on Top Overlay Silk Text to Silk Clearance [5.84mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=Z:\3dprinter\lightshow\lightshowctl\lightshowctl.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=40401.887mil|Location2.X=40409.137mil|Location1.Y=18780.792mil|Location2.Y=18788.042mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=Z:\3dprinter\lightshow\lightshowctl\lightshowctl.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=40401.887mil|Location2.X=40409.137mil|Location1.Y=18780.792mil|Location2.Y=18788.042mil|Absolute=True">Silk To Silk Clearance Constraint: (5.84mil &lt; 6mil) Between Text "C14" (40420mil,18790mil) on Top Overlay And Track (40405.512mil,18779.528mil)(40708.662mil,18779.528mil) on Top Overlay Silk Text to Silk Clearance [5.84mil]</acronym></a><br></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br><a name="IDWGROVASTDQT0J5IUNOOYMTP1DDSEB2EQRIFFRUC4GF2N2PVKWYUC"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Silk To Solder Mask (Clearance=4mil) (IsPad),(All)</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=Z:\3dprinter\lightshow\lightshowctl\lightshowctl.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=40543.443mil|Location2.X=40547.109mil|Location1.Y=13378.085mil|Location2.Y=13381.751mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=Z:\3dprinter\lightshow\lightshowctl\lightshowctl.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=40543.443mil|Location2.X=40547.109mil|Location1.Y=13378.085mil|Location2.Y=13381.751mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (Collision &lt; 4mil) Between Track (40545.276mil,13370.748mil)(40545.276mil,14015.748mil) on Top Overlay And Pad J1-MOUNT3(40535.436mil,13417.318mil) on Component Side [Top Overlay] to [Top Solder] clearance [0mil]</acronym></a><br></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br><a name="IDYC5WWNFMTWG1VN1ELYU4DS0PPNQLFAGBLD15AIKGWQHA3RCX0WE"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Height Constraint (Min=0mil) (Max=1968.504mil) (Prefered=500mil) (All)</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=Z:\3dprinter\lightshow\lightshowctl\lightshowctl.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=40269mil|Location2.X=40271mil|Location1.Y=16294mil|Location2.Y=16296mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=Z:\3dprinter\lightshow\lightshowctl\lightshowctl.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=40269mil|Location2.X=40271mil|Location1.Y=16294mil|Location2.Y=16296mil|Absolute=True">Height Constraint: SIP Component B1-BK-18650-PC2 (40270mil,16295mil) on Component Side Actual Height = 3937.008mil</acronym></a><br></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br><a name="IDZRJNHWMCPSX5PRDWWSXAVBGQIKSL3SBKN0BJB4MGV3AYN25BYVZF"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Clearance Constraint (Gap=5mil) (All),(All)</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=Z:\3dprinter\lightshow\lightshowctl\lightshowctl.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=39830.51mil|Location2.X=39834.844mil|Location1.Y=17340.649mil|Location2.Y=17344.983mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=Z:\3dprinter\lightshow\lightshowctl\lightshowctl.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=39830.51mil|Location2.X=39834.844mil|Location1.Y=17340.649mil|Location2.Y=17344.983mil|Absolute=True">Clearance Constraint: (Collision &lt; 5mil) Between Region (0 hole(s)) Solder Side And Track (39830.472mil,17340.316mil)(40110.472mil,17340.316mil) on Keep-Out Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=Z:\3dprinter\lightshow\lightshowctl\lightshowctl.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=39830.51mil|Location2.X=39834.844mil|Location1.Y=16868.207mil|Location2.Y=16872.541mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=Z:\3dprinter\lightshow\lightshowctl\lightshowctl.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=39830.51mil|Location2.X=39834.844mil|Location1.Y=16868.207mil|Location2.Y=16872.541mil|Absolute=True">Clearance Constraint: (Collision &lt; 5mil) Between Region (0 hole(s)) Solder Side And Track (39830.472mil,16867.874mil)(40110.472mil,16867.874mil) on Keep-Out Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=Z:\3dprinter\lightshow\lightshowctl\lightshowctl.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=39830.51mil|Location2.X=39834.844mil|Location1.Y=16395.767mil|Location2.Y=16400.101mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=Z:\3dprinter\lightshow\lightshowctl\lightshowctl.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=39830.51mil|Location2.X=39834.844mil|Location1.Y=16395.767mil|Location2.Y=16400.101mil|Absolute=True">Clearance Constraint: (Collision &lt; 5mil) Between Region (0 hole(s)) Solder Side And Track (39830.472mil,16395.434mil)(40110.472mil,16395.434mil) on Keep-Out Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=Z:\3dprinter\lightshow\lightshowctl\lightshowctl.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=39830.51mil|Location2.X=39834.844mil|Location1.Y=15923.325mil|Location2.Y=15927.659mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=Z:\3dprinter\lightshow\lightshowctl\lightshowctl.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=39830.51mil|Location2.X=39834.844mil|Location1.Y=15923.325mil|Location2.Y=15927.659mil|Absolute=True">Clearance Constraint: (Collision &lt; 5mil) Between Region (0 hole(s)) Solder Side And Track (39830.472mil,15922.992mil)(40110.472mil,15922.992mil) on Keep-Out Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=Z:\3dprinter\lightshow\lightshowctl\lightshowctl.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=39830.51mil|Location2.X=39834.844mil|Location1.Y=15450.885mil|Location2.Y=15455.219mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=Z:\3dprinter\lightshow\lightshowctl\lightshowctl.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=39830.51mil|Location2.X=39834.844mil|Location1.Y=15450.885mil|Location2.Y=15455.219mil|Absolute=True">Clearance Constraint: (Collision &lt; 5mil) Between Region (0 hole(s)) Solder Side And Track (39830.472mil,15450.552mil)(40110.472mil,15450.552mil) on Keep-Out Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=Z:\3dprinter\lightshow\lightshowctl\lightshowctl.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=40450.589mil|Location2.X=40454.923mil|Location1.Y=17340.649mil|Location2.Y=17344.983mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=Z:\3dprinter\lightshow\lightshowctl\lightshowctl.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=40450.589mil|Location2.X=40454.923mil|Location1.Y=17340.649mil|Location2.Y=17344.983mil|Absolute=True">Clearance Constraint: (Collision &lt; 5mil) Between Region (0 hole(s)) Solder Side And Track (40450.552mil,17340.316mil)(40730.552mil,17340.316mil) on Keep-Out Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=Z:\3dprinter\lightshow\lightshowctl\lightshowctl.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=40450.589mil|Location2.X=40454.923mil|Location1.Y=16868.207mil|Location2.Y=16872.541mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=Z:\3dprinter\lightshow\lightshowctl\lightshowctl.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=40450.589mil|Location2.X=40454.923mil|Location1.Y=16868.207mil|Location2.Y=16872.541mil|Absolute=True">Clearance Constraint: (Collision &lt; 5mil) Between Region (0 hole(s)) Solder Side And Track (40450.552mil,16867.874mil)(40730.552mil,16867.874mil) on Keep-Out Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=Z:\3dprinter\lightshow\lightshowctl\lightshowctl.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=40450.589mil|Location2.X=40454.923mil|Location1.Y=16395.767mil|Location2.Y=16400.101mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=Z:\3dprinter\lightshow\lightshowctl\lightshowctl.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=40450.589mil|Location2.X=40454.923mil|Location1.Y=16395.767mil|Location2.Y=16400.101mil|Absolute=True">Clearance Constraint: (Collision &lt; 5mil) Between Region (0 hole(s)) Solder Side And Track (40450.552mil,16395.434mil)(40730.552mil,16395.434mil) on Keep-Out Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=Z:\3dprinter\lightshow\lightshowctl\lightshowctl.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=40450.589mil|Location2.X=40454.923mil|Location1.Y=15923.325mil|Location2.Y=15927.659mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=Z:\3dprinter\lightshow\lightshowctl\lightshowctl.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=40450.589mil|Location2.X=40454.923mil|Location1.Y=15923.325mil|Location2.Y=15927.659mil|Absolute=True">Clearance Constraint: (Collision &lt; 5mil) Between Region (0 hole(s)) Solder Side And Track (40450.552mil,15922.992mil)(40730.552mil,15922.992mil) on Keep-Out Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=Z:\3dprinter\lightshow\lightshowctl\lightshowctl.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=40450.589mil|Location2.X=40454.923mil|Location1.Y=15450.885mil|Location2.Y=15455.219mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=Z:\3dprinter\lightshow\lightshowctl\lightshowctl.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=40450.589mil|Location2.X=40454.923mil|Location1.Y=15450.885mil|Location2.Y=15455.219mil|Absolute=True">Clearance Constraint: (Collision &lt; 5mil) Between Region (0 hole(s)) Solder Side And Track (40450.552mil,15450.552mil)(40730.552mil,15450.552mil) on Keep-Out Layer </acronym></a><br></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br></body>
+</html>

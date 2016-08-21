@@ -1,0 +1,23 @@
+----------------------------------------------------------------------------------------------------------------------------------
+NCDrill File Report For: lightshowctl.PcbDoc   21/08/2016  16:18:06
+----------------------------------------------------------------------------------------------------------------------------------
+
+Layer Pair : Component Side to Solder Side
+ASCII RoundHoles File : lightshowctl-RoundHoles.TXT
+ASCII SlotHoles File : lightshowctl-SlotHoles.TXT
+ASCII RectHoles File : lightshowctl-RectHoles.TXT
+
+Tool       Hole Size               Hole Tolerance               Hole Type       Hole Count   Plated         Tool Travel
+----------------------------------------------------------------------------------------------------------------------------------
+T1      0.279mm (11mil)                                           Round             23        PTH        154.92mm (6.10inch)
+T2      0.3mm (12mil)                                             Round             67        PTH        332.06mm (13.07inch)
+T3      0.65mm (26mil)                                            Slot              2         PTH        9.30mm (0.37inch)
+T4      0.75mm (30mil)                                            Round             10        PTH        11.43mm (0.45inch)
+T5      0.825mm (32mil)                                           Slot              2         PTH        17.73mm (0.70inch)
+T6      1.143mm (45mil)                                           Round             20        PTH        65.72mm (2.59inch)
+T7      2.438mm (96mil)                                           Rectangle         2         PTH        148.04mm (5.83inch)
+T8      3.3mm (130mil)                                            Round             2         PTH        55.61mm (2.19inch)
+----------------------------------------------------------------------------------------------------------------------------------
+Totals                                                                              128
+
+Total Processing Time (hh:mm:ss) : 00:00:00

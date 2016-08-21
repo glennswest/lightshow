@@ -1,0 +1,43 @@
+Added Component: Designator=J3(3220-10-0100)
+Added Component: Designator=U1(TSQFP50P1300X1300X120-64N)
+Added Pin To Net: NetName=SWDIO Pin=J3-2
+Added Pin To Net: NetName=GND Pin=J3-3
+Added Pin To Net: NetName=SWCLK Pin=J3-4
+Added Pin To Net: NetName=GND Pin=J3-5
+Added Pin To Net: NetName=GND Pin=J3-9
+Added Pin To Net: NetName=RESETN Pin=J3-10
+Added Pin To Net: NetName=PTCY0 Pin=U1-1
+Added Pin To Net: NetName=PTCY1 Pin=U1-2
+Added Pin To Net: NetName=CLK0 Pin=U1-4
+Added Pin To Net: NetName=DAT0 Pin=U1-5
+Added Pin To Net: NetName=GND Pin=U1-7
+Added Pin To Net: NetName=VCC Pin=U1-8
+Added Pin To Net: NetName=PTCY2 Pin=U1-13
+Added Pin To Net: NetName=PTCX0 Pin=U1-17
+Added Pin To Net: NetName=PTCX1 Pin=U1-18
+Added Pin To Net: NetName=PTCX2 Pin=U1-19
+Added Pin To Net: NetName=PTCX3 Pin=U1-20
+Added Pin To Net: NetName=VCC Pin=U1-21
+Added Pin To Net: NetName=GND Pin=U1-22
+Added Pin To Net: NetName=MOSI Pin=U1-29
+Added Pin To Net: NetName=SCLK Pin=U1-30
+Added Pin To Net: NetName=SS Pin=U1-31
+Added Pin To Net: NetName=MISO Pin=U1-32
+Added Pin To Net: NetName=GND Pin=U1-33
+Added Pin To Net: NetName=VCC Pin=U1-34
+Added Pin To Net: NetName=PTCX4 Pin=U1-35
+Added Pin To Net: NetName=USB_N Pin=U1-45
+Added Pin To Net: NetName=USB_P Pin=U1-46
+Added Pin To Net: NetName=GND Pin=U1-47
+Added Pin To Net: NetName=VCC Pin=U1-48
+Added Pin To Net: NetName=SDA Pin=U1-49
+Added Pin To Net: NetName=SCL Pin=U1-50
+Added Pin To Net: NetName=RESETN Pin=U1-52
+Added Pin To Net: NetName=GND Pin=U1-54
+Added Pin To Net: NetName=VCORE Pin=U1-55
+Added Pin To Net: NetName=VCC Pin=U1-56
+Added Pin To Net: NetName=SWCLK Pin=U1-57
+Added Pin To Net: NetName=SWDIO Pin=U1-58
+Added Pin To Net: NetName=GND Pin=U2-2
+Added Member To Class: ClassName=Sheet1_Cpu Member=Component J3 3220-10-0100 SWD
+Added Member To Class: ClassName=Sheet1_Cpu Member=Component U1 SAMD21TQFP64
